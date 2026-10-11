@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "validbutwrong"
 version = "0.1.0"
-description = "Measure what grammar-constrained decoding costs (or buys) you in answer correctness, not just schema validity."
+description = "Measure what constrained decoding with a grammar costs or buys in answer correctness, as well as schema validity."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
