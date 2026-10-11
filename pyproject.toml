@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "validbutwrong"
+version = "0.1.0"
+description = "Measure what grammar-constrained decoding costs (or buys) you in answer correctness, not just schema validity."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "macamiri" }]
+keywords = ["llm", "structured-output", "constrained-decoding", "json-schema", "grammar", "evaluation", "outlines", "llama-cpp"]
+dependencies = ["jsonschema>=4"]
+
+[project.optional-dependencies]
+live = ["llama-cpp-python>=0.3.36", "outlines>=1.3", "numba", "jinja2"]
+test = ["pytest>=8"]
+
+[project.scripts]
+validbutwrong = "validbutwrong.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/macamiri/validbutwrong"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+validbutwrong = ["data/*.jsonl", "data/*.md", "replays/*.jsonl"]

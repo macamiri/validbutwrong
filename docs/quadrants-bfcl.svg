@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="616" height="256" viewBox="0 0 616 256" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="70" y="22" font-size="14" font-weight="600" fill="#1f2328">bfcl-simple: validity × correctness per arm (N=200)</text>
+<text x="70" y="40" font-size="11" fill="#59636e">red cell = valid but wrong: the answers a 100%-valid dashboard hides</text>
+<text x="62" y="100.0" font-size="11" fill="#59636e" text-anchor="end">valid</text>
+<text x="62" y="164.0" font-size="11" fill="#59636e" text-anchor="end">invalid</text>
+<rect x="70" y="64" width="62" height="62" fill="#57606a" fill-opacity="0.293" stroke="#d0d7de"/>
+<text x="101.0" y="101.0" font-size="14" font-weight="400" text-anchor="middle" fill="#1f2328">52</text>
+<rect x="134" y="64" width="62" height="62" fill="#cf222e" fill-opacity="0.125" stroke="#d0d7de"/>
+<text x="165.0" y="101.0" font-size="14" font-weight="600" text-anchor="middle" fill="#1f2328">11</text>
+<rect x="70" y="128" width="62" height="62" fill="#57606a" fill-opacity="0.080" stroke="#d0d7de"/>
+<text x="101.0" y="165.0" font-size="14" font-weight="400" text-anchor="middle" fill="#1f2328">0</text>
+<rect x="134" y="128" width="62" height="62" fill="#57606a" fill-opacity="0.642" stroke="#d0d7de"/>
+<text x="165.0" y="165.0" font-size="14" font-weight="400" text-anchor="middle" fill="#ffffff">137</text>
+<text x="102.0" y="56" font-size="10" fill="#59636e" text-anchor="middle">right</text>
+<text x="166.0" y="56" font-size="10" fill="#59636e" text-anchor="middle">wrong</text>
+<text x="134" y="210" font-size="11" fill="#1f2328" text-anchor="middle">prompt_json[arguments]</text>
+<rect x="252" y="64" width="62" height="62" fill="#57606a" fill-opacity="0.740" stroke="#d0d7de"/>
+<text x="283.0" y="101.0" font-size="14" font-weight="400" text-anchor="middle" fill="#ffffff">161</text>
+<rect x="316" y="64" width="62" height="62" fill="#cf222e" fill-opacity="0.240" stroke="#d0d7de"/>
+<text x="347.0" y="101.0" font-size="14" font-weight="600" text-anchor="middle" fill="#1f2328">39</text>
+<rect x="252" y="128" width="62" height="62" fill="#57606a" fill-opacity="0.080" stroke="#d0d7de"/>
+<text x="283.0" y="165.0" font-size="14" font-weight="400" text-anchor="middle" fill="#1f2328">0</text>
+<rect x="316" y="128" width="62" height="62" fill="#57606a" fill-opacity="0.080" stroke="#d0d7de"/>
+<text x="347.0" y="165.0" font-size="14" font-weight="400" text-anchor="middle" fill="#1f2328">0</text>
+<text x="284.0" y="56" font-size="10" fill="#59636e" text-anchor="middle">right</text>
+<text x="348.0" y="56" font-size="10" fill="#59636e" text-anchor="middle">wrong</text>
+<text x="316" y="210" font-size="11" fill="#1f2328" text-anchor="middle">constrained[arguments]</text>
+<rect x="434" y="64" width="62" height="62" fill="#57606a" fill-opacity="0.773" stroke="#d0d7de"/>
+<text x="465.0" y="101.0" font-size="14" font-weight="400" text-anchor="middle" fill="#ffffff">169</text>
+<rect x="498" y="64" width="62" height="62" fill="#cf222e" fill-opacity="0.207" stroke="#d0d7de"/>
+<text x="529.0" y="101.0" font-size="14" font-weight="600" text-anchor="middle" fill="#1f2328">31</text>
+<rect x="434" y="128" width="62" height="62" fill="#57606a" fill-opacity="0.080" stroke="#d0d7de"/>
+<text x="465.0" y="165.0" font-size="14" font-weight="400" text-anchor="middle" fill="#1f2328">0</text>
+<rect x="498" y="128" width="62" height="62" fill="#57606a" fill-opacity="0.080" stroke="#d0d7de"/>
+<text x="529.0" y="165.0" font-size="14" font-weight="400" text-anchor="middle" fill="#1f2328">0</text>
+<text x="466.0" y="56" font-size="10" fill="#59636e" text-anchor="middle">right</text>
+<text x="530.0" y="56" font-size="10" fill="#59636e" text-anchor="middle">wrong</text>
+<text x="498" y="210" font-size="11" fill="#1f2328" text-anchor="middle">reason_then_constrain[arguments]</text>
+</svg>

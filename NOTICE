@@ -1,0 +1,20 @@
+validbutwrong
+Copyright (c) 2026 macamiri. Licensed under the MIT License (see LICENSE).
+
+This package bundles third-party data, redistributed under their own licences:
+
+1. GSM8K (first 200 test problems) — src/validbutwrong/data/gsm8k_test_first200.jsonl
+   Source: https://github.com/openai/grade-school-math (commit 3101c7d5072418e28b9008a6636bde82a006892c)
+   Licence: MIT License, Copyright (c) 2021 OpenAI.
+   The committed replay src/validbutwrong/replays/gsm8k.jsonl contains model generations for these problems.
+
+2. Berkeley Function Calling Leaderboard (BFCL v3 "simple" + possible_answer) —
+   src/validbutwrong/data/bfcl_v3_simple.jsonl, src/validbutwrong/data/bfcl_v3_simple_possible_answer.jsonl
+   Source: https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard
+           (revision 61fc0608cfd831fcfbbaa676ebdfef0ed963eeda)
+   Licence: Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
+   The committed replay src/validbutwrong/replays/bfcl-simple.jsonl contains model generations derived from these items.
+   Files are unmodified copies of the upstream files.
+
+The replays were generated with Qwen/Qwen2.5-0.5B-Instruct-GGUF (Apache-2.0); no model weights are bundled.
+See src/validbutwrong/data/SOURCES.md for pinned revisions.
