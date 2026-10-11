@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "validbutwrong"
-version = "0.1.0"
+version = "0.1.1"
 description = "Measure what constrained decoding with a grammar costs or buys in answer correctness, as well as schema validity."
 readme = "README.md"
 requires-python = ">=3.10"

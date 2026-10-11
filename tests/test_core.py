@@ -277,3 +277,17 @@ def test_default_run_replays_both_tasks_without_model_libs(tmp_path):
         rep = json.loads((out / name / "report.json").read_text())
         assert rep["mode"] == "replay" and rep["n"] == 200
     assert cli.main(["run", "--replay", "x.jsonl", "--out", str(out)]) == 2  # ambiguous without --task
+
+
+# --------------------------------------------------------------------------- chat template (untrusted input)
+
+def test_chat_template_is_rendered_in_a_sandbox():
+    pytest.importorskip("jinja2")
+    from jinja2.exceptions import SecurityError
+    from validbutwrong.engines import render_chat_template
+
+    ok = "{% for m in messages %}<{{ m.role }}>{{ m.content }}{% endfor %}{% if add_generation_prompt %}<assistant>{% endif %}"
+    assert render_chat_template(ok, [{"role": "user", "content": "hi"}]) == "<user>hi<assistant>"
+    evil = "{{ ''.__class__.__mro__[1].__subclasses__() }}"  # the CVE-2024-34359 shape
+    with pytest.raises(SecurityError):
+        render_chat_template(evil, [])

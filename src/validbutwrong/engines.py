@@ -31,6 +31,16 @@ class Generation:
     n_tokens: int
 
 
+def render_chat_template(template: str, messages: list[dict]) -> str:
+    """Render a GGUF chat template. The template comes from the model file, so it is untrusted
+    input: render it in jinja2's immutable sandbox, the fix llama-cpp-python adopted for
+    CVE-2024-34359. A template that reaches for Python internals raises SecurityError."""
+    from jinja2.sandbox import ImmutableSandboxedEnvironment
+
+    env = ImmutableSandboxedEnvironment()
+    return env.from_string(template).render(messages=messages, add_generation_prompt=True)
+
+
 class Engine:
     name = "engine"
 
@@ -50,10 +60,7 @@ class Engine:
     def format(self, messages: list[dict]) -> str:
         if not self._template:
             raise ValueError("GGUF has no tokenizer.chat_template; pass a chat model")
-        import jinja2
-
-        env = jinja2.Environment(loader=jinja2.BaseLoader())
-        return env.from_string(self._template).render(messages=messages, add_generation_prompt=True)
+        return render_chat_template(self._template, messages)
 
     def generate(self, messages: list[dict], schema: dict | None, max_tokens: int) -> Generation:
         raise NotImplementedError
